@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
          @Override
             public void onClick(View view){
              IntentIntegrator integrador = new IntentIntegrator( MainActivity.this);
-             integrador.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE);
+             integrador.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE );
              integrador.setPrompt("Lector QR");
              integrador.setCameraId(0);
              integrador.setBarcodeImageEnabled(true);
