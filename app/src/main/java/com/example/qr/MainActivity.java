@@ -42,11 +42,13 @@ public class MainActivity extends AppCompatActivity {
 
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode,resultCode,data);
 
-        if(result != null){
+        if(result == null){
             Toast.makeText(this, "Lector Detenido", Toast.LENGTH_LONG).show();
-        }else {
-            Toast.makeText(this, result.getContents(), Toast.LENGTH_LONG).show();
+        }
+        else {
+            Toast.makeText(this, "Lector Detenido", Toast.LENGTH_LONG).show();
             txtResultado.setText(result.getContents());
+
         }
 
         super.onActivityResult(requestCode,resultCode,data);
