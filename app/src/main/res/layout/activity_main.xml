@@ -12,12 +12,15 @@
         android:layout_height="70dp"/>
 
 
-        <TextView
+    <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
         android:layout_gravity="center"
+        android:text="Bien venido"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="20sp"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="16dp" />
 
@@ -64,7 +67,7 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="180dp"/>
+        android:layout_height="130dp"/>
 
     <Button
         android:id="@+id/btnScan"
@@ -75,6 +78,32 @@
         app:layout_constraintTop_toBottomOf="@+id/txtResultado"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="148dp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <Button
+        android:id="@+id/btnEnviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Enviar"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="148dp"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <Button
+        android:id="@+id/btnLimpiar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Limpiar"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="148dp"/>
 
 
 </LinearLayout>

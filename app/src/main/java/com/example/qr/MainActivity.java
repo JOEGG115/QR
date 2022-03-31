@@ -16,6 +16,9 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnScan;
     EditText txtResultado;
+    Button btnEnviar;
+    Button btnLimpiar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
         btnScan = findViewById(R.id.btnScan);
         txtResultado = findViewById(R.id.txtResultado);
+        btnEnviar = findViewById(R.id.btnEnviar);
+        btnLimpiar = findViewById(R.id.btnLimpiar);
 
         btnScan.setOnClickListener(new View.OnClickListener(){
          @Override
@@ -36,23 +41,27 @@ public class MainActivity extends AppCompatActivity {
              integrador.initiateScan();
          }
         });
+
+        btnEnviar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
-
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode,resultCode,data);
-
         if(result == null){
             Toast.makeText(this, "Lector Detenido", Toast.LENGTH_LONG).show();
         }
         else {
             Toast.makeText(this, "Lector Detenido", Toast.LENGTH_LONG).show();
             txtResultado.setText(result.getContents());
-
         }
-
         super.onActivityResult(requestCode,resultCode,data);
     }
+
 
 }
 
