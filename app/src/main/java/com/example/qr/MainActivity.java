@@ -15,10 +15,8 @@ import com.google.zxing.integration.android.IntentResult;
 public class MainActivity extends AppCompatActivity {
 
     Button btnScan;
-    EditText txtResultado;
+    EditText txtResultado, txtTelefono;
     Button btnEnviar;
-    Button btnLimpiar;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +25,10 @@ public class MainActivity extends AppCompatActivity {
 
         btnScan = findViewById(R.id.btnScan);
         txtResultado = findViewById(R.id.txtResultado);
+        txtTelefono = findViewById(R.id.txtTelefono);
         btnEnviar = findViewById(R.id.btnEnviar);
-        btnLimpiar = findViewById(R.id.btnLimpiar);
+
+        final DeveloperDB developerBD=new DeveloperDB(getApplicationContext());
 
         btnScan.setOnClickListener(new View.OnClickListener(){
          @Override
@@ -41,11 +41,11 @@ public class MainActivity extends AppCompatActivity {
              integrador.initiateScan();
          }
         });
-
         btnEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                DeveloperDB.agregarRegistro(txtResultado.getText().toString(),txtTelefono.getText().toString());
+                Toast.makeText(getApplicationContext(),"SE AGREGO CORRECTAMENTE", Toast.LENGTH_SHORT).show();
             }
         });
     }
