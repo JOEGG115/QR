@@ -29,6 +29,7 @@ public class DeveloperDB extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+TABLA_REGISTROS);
         sqLiteDatabase.execSQL(TABLA_REGISTROS);
+
     }
 
     public void agregarRegistros(int codigo, String ubicacion, int telefono){

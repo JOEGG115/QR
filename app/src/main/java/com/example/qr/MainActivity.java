@@ -3,6 +3,7 @@ package com.example.qr;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     Button btnEnviar;
     Button btnScan;
 
+    String bd="developer.db";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         btnScan = (Button) findViewById(R.id.btnScan);
 
         final DeveloperDB developerBD=new DeveloperDB(getApplicationContext());
+        getApplicationContext().openOrCreateDatabase(bd, MODE_PRIVATE, null);
 
         btnScan.setOnClickListener(new View.OnClickListener(){
          @Override
