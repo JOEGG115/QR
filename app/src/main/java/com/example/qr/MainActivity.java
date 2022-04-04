@@ -15,7 +15,7 @@ import com.google.zxing.integration.android.IntentResult;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText txtResultado, txtTelefono,txtCodigo;
+    EditText txtResultado,txtTelefono,txtCodigo;
     Button btnEnviar;
     Button btnScan;
 
