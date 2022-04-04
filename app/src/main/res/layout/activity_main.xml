@@ -12,7 +12,7 @@
         android:layout_height="70dp"/>
 
 
-    <TextView
+        <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,16 +26,31 @@
 
         <Space
         android:layout_width="match_parent"
-        android:layout_height="90dp"/>
+        android:layout_height="50dp"/>
 
-        <EditText
+    <EditText
+        android:id="@+id/txtCodigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="13"
+        android:layout_gravity="center"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="189dp" />
+
+        <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    <EditText
         android:id="@+id/txtResultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="13"
         android:layout_gravity="center"
         android:inputType="textPersonName"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
@@ -55,13 +70,9 @@
 
         <Space
         android:layout_width="match_parent"
-        android:layout_height="50dp"/>
-
-    <Space
-        android:layout_width="match_parent"
         android:layout_height="130dp"/>
 
-    <Button
+        <Button
         android:id="@+id/btnScan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -87,6 +98,7 @@
     <Space
         android:layout_width="match_parent"
         android:layout_height="10dp"/>
+
 
 
 </LinearLayout>

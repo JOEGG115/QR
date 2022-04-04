@@ -14,19 +14,20 @@ import com.google.zxing.integration.android.IntentResult;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnScan;
-    EditText txtResultado, txtTelefono;
+    EditText txtResultado, txtTelefono,txtCodigo;
     Button btnEnviar;
+    Button btnScan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnScan = findViewById(R.id.btnScan);
-        txtResultado = findViewById(R.id.txtResultado);
-        txtTelefono = findViewById(R.id.txtTelefono);
-        btnEnviar = findViewById(R.id.btnEnviar);
+        txtCodigo = (EditText) findViewById(R.id.txtCodigo);
+        txtResultado = (EditText) findViewById(R.id.txtResultado);
+        txtTelefono = (EditText) findViewById(R.id.txtTelefono);
+        btnEnviar = (Button) findViewById(R.id.btnEnviar);
+        btnScan = (Button) findViewById(R.id.btnScan);
 
         final DeveloperDB developerBD=new DeveloperDB(getApplicationContext());
 
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         btnEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DeveloperDB.agregarRegistro(txtResultado.getText().toString(),txtTelefono.getText().toString());
+                DeveloperDB.agregarRegistros(txtResultado.getText().toString(),txtTelefono.getText().toString());
                 Toast.makeText(getApplicationContext(),"SE AGREGO CORRECTAMENTE", Toast.LENGTH_SHORT).show();
             }
         });
