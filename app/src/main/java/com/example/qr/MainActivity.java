@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 developerDB.agregarRegistros(txtCodigo.getText().toString(),txtResultado.getText().toString(),txtTelefono.getText().toString());
-                Toast.makeText(getApplicationContext(),"SE AGREGO CORRECTAMENTE", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Datos Enviados", Toast.LENGTH_SHORT).show();
             }
         });
     }
