@@ -10,7 +10,7 @@ public class DeveloperDB extends SQLiteOpenHelper {
 
     private static final String NOMBRE_DB="developer.db";
     private static final int VERSION_DB=1;
-    private static final String TABLA_REGISTROS="CREATE TABLE REGISTROS (CODIGO INT PRIMARY KEY,UBICACION TEXT, TELEFONO INT )";
+    private static final String TABLA_REGISTROS="CREATE TABLE REGISTROS(CODIGO INT PRIMARY KEY,UBICACION TEXT, TELEFONO INT )";
 
     public DeveloperDB(@Nullable Context context) {
         super(context, NOMBRE_DB, null, VERSION_DB);
@@ -32,10 +32,10 @@ public class DeveloperDB extends SQLiteOpenHelper {
 
     }
 
-    public void agregarRegistros(int codigo, String ubicacion, int telefono){
+    public void agregarRegistros(String codigo, String ubicacion, String telefono){
         SQLiteDatabase bd=getWritableDatabase();
         if (bd!=null){
-            bd.execSQL("INSERT INTO REGISTROS VALUES('"+codigo+","+telefono+","+ubicacion+"')");
+            bd.execSQL("INSERT INTO REGISTROS VALUES('"+codigo+","+ubicacion+","+telefono+"')");
             bd.close();
         }
     }

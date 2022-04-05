@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         btnEnviar = (Button) findViewById(R.id.btnEnviar);
         btnScan = (Button) findViewById(R.id.btnScan);
 
-        final DeveloperDB developerBD=new DeveloperDB(getApplicationContext());
+        final DeveloperDB developerDB=new DeveloperDB(getApplicationContext());
         getApplicationContext().openOrCreateDatabase(bd, MODE_PRIVATE, null);
 
         btnScan.setOnClickListener(new View.OnClickListener(){
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         btnEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DeveloperDB.agregarRegistros(txtResultado.getText().toString(),txtTelefono.getText().toString());
+                developerDB.agregarRegistros(txtCodigo.getText().toString(),txtResultado.getText().toString(),txtTelefono.getText().toString());
                 Toast.makeText(getApplicationContext(),"SE AGREGO CORRECTAMENTE", Toast.LENGTH_SHORT).show();
             }
         });
