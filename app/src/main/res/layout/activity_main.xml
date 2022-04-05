@@ -91,7 +91,7 @@
 
         <Space
         android:layout_width="match_parent"
-        android:layout_height="130dp"/>
+        android:layout_height="30dp"/>
 
         <Button
         android:id="@+id/btnScan"

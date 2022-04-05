@@ -35,7 +35,7 @@ public class DeveloperDB extends SQLiteOpenHelper {
     public void agregarRegistros(String codigo, String ubicacion, String telefono){
         SQLiteDatabase bd=getWritableDatabase();
         if (bd!=null){
-            bd.execSQL("INSERT INTO REGISTROS VALUES('"+codigo+","+ubicacion+","+telefono+"')");
+            bd.execSQL("INSERT INTO REGISTROS VALUES('"+codigo+"','"+ubicacion+"','"+telefono+"')");
             bd.close();
         }
     }
